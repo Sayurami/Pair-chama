@@ -2,14 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.html",
-      "use": "@vercel/static"
+      "src": "api/mega.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "/api/mega", "dest": "/api/mega.js" },
+    { "src": "/(.*)", "dest": "/public/$1" }
   ]
 }
