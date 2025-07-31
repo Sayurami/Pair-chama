@@ -1,16 +1,19 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/main.html" }
-  ],
-  "headers": [
+  "version": 2,
+  "public": true,
+  "builds": [],
+  "routes": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
+      "src": "/",
+      "dest": "/pair.html"
+    },
+    {
+      "src": "/pair.js",
+      "dest": "/pair.js"
+    },
+    {
+      "src": "/mega.js",
+      "dest": "/mega.js"
     }
   ]
 }
