@@ -1,7 +1,11 @@
 {
   "version": 2,
-  "public": true,
-  "builds": [],
+  "builds": [
+    {
+      "src": "api/mega.js",
+      "use": "@vercel/node"
+    }
+  ],
   "routes": [
     {
       "src": "/",
@@ -12,8 +16,8 @@
       "dest": "/pair.js"
     },
     {
-      "src": "/mega.js",
-      "dest": "/mega.js"
+      "src": "/api/mega",
+      "dest": "/api/mega.js"
     }
   ]
 }
